@@ -63,25 +63,25 @@ Plantilla (create.html):
   - Mensajes de error si algún campo es inválido.
   - Botón "Crear pez" deshabilitado si el formulario es inválido.
 
-  4. Componente List
-  Archivo: pages/list/list.ts
-    - Muestra la lista de peces en el acuario.
-    - Recibe un array de Fish como Input y lo actualiza desde FishService.
-  Funciones:
-    - loadFishes() → Carga los peces desde el servicio.
-    - deleteFish(id) → Elimina un pez y recarga la lista.
-    - Utiliza el componente Card para mostrar cada pez individualmente.
-  Plantilla (list.html):
-    - Muestra un mensaje si no hay peces.
-    - Itera sobre los peces para mostrarlos en tarjetas (Card).
-    - Cada tarjeta permite eliminar su pez correspondiente.
+4. Componente List
+Archivo: pages/list/list.ts
+  - Muestra la lista de peces en el acuario.
+- Recibe un array de Fish como Input y lo actualiza desde FishService.
+Funciones:
+  - loadFishes() → Carga los peces desde el servicio.
+  - deleteFish(id) → Elimina un pez y recarga la lista.
+  - Utiliza el componente Card para mostrar cada pez individualmente.
+Plantilla (list.html):
+  - Muestra un mensaje si no hay peces.
+  - Itera sobre los peces para mostrarlos en tarjetas (Card).
+  - Cada tarjeta permite eliminar su pez correspondiente.
 
-  5. Servicio FishService
-  Archivo: services/fish-service.ts
-    - Maneja la lógica central del acuario.
-  Funciones principales:
-    - getList() → Devuelve todos los peces.
-    - addFish(fish) → Agrega un pez al acuario.
-    - removeFish(id) → Elimina un pez por id.
-    - generateId() → Genera un id único para un nuevo pez.
-  Mantiene la lista de peces en memoria (fishes: Fish[]).
+5. Servicio FishService
+Archivo: services/fish-service.ts
+  - Maneja la lógica central del acuario.
+Funciones principales:
+- getList() → Devuelve todos los peces.
+  - addFish(fish) → Agrega un pez al acuario.
+  - removeFish(id) → Elimina un pez por id.
+  - generateId() → Genera un id único para un nuevo pez.
+Mantiene la lista de peces en memoria (fishes: Fish[]).
