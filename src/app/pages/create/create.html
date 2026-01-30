@@ -1,1 +1,31 @@
-<p>create works!</p>
+<section class="form-container">
+  <h2>Añadir nuevo pez</h2>
+
+  <form [formGroup]="fishForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nombre
+      <input type="text" formControlName="name">
+    </label>
+
+    <!-- Mensaje de error que se muestra si el campo 'name' ha sido tocado y es inválido  -->
+    @if (fishForm.get('name')?.touched && fishForm.get('name')?.invalid) {
+      <small>Nombre obligatorio (mín. 3 caracteres)</small>
+    }
+
+    <!-- Campos para ingresar los datos del pez -->
+    <label>
+      Especie
+      <input type="text" formControlName="species">
+    </label>
+
+    <label>
+      Tamaño
+      <input type="text" formControlName="size">
+    </label>
+    
+    <!-- boton para enviar el formulario, que se deactiva si el formulario es invalido -->
+    <button type="submit" [disabled]="fishForm.invalid">
+      Crear pez
+    </button>
+  </form>
+</section>

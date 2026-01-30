@@ -1,1 +1,19 @@
-<p>list works!</p>
+<section class="list">
+    <h2>Lista de peces en el acuario</h2>
+
+    <!-- Condicional que verifica si no hay peces en la lista -->
+    @if (fishes.length === 0) {
+        <!-- Mensaje que se muestra cuando la lista esta vacia -->
+        <p class="empty">No hay ningun pez en el acuario</p>
+    }
+    @else{
+        <div class="grid">
+            <!-- Bucle que recorre cada pez en fishes -->
+            @for (f of fishes; track f.id) {
+                <!-- Se pasa el objeto f como Input y se maneja el evento delete -->
+                <app-card [fishes]="f" (delete) = "deleteFish($event)">
+            </app-card>
+            }
+        </div>
+    }
+</section>

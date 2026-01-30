@@ -1,0 +1,42 @@
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+small {
+  color: #ffb703;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00b4d8;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: gray;
+}

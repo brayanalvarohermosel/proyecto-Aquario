@@ -1,0 +1,27 @@
+.hero {
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.hero h2 {
+  color: #caf0f8;
+  margin-bottom: 15px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 10%;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}

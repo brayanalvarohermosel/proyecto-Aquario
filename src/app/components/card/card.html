@@ -1,1 +1,15 @@
-<p>card works!</p>
+<!-- Muestra la lista de peces que ha en el acuario -->
+
+@if (fishes) {
+  
+     <div class="card">
+      
+    <!-- Muestra los atributos de cada pez -->
+     <h3>{{ fishes.name }}</h3>
+     <p><strong>Especie:</strong> {{ fishes.species }}</p>
+     <p><strong>Tamaño:</strong> {{ fishes.size }} </p>
+      
+     <!-- Boton que aparece debajo de cada pez para eliminarlo del acuario -->
+     <button (click)="onDelete()">Eliminar</button>
+   </div>
+}
