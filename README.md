@@ -23,8 +23,10 @@ La aplicación utiliza **formularios reactivos**, **componentes reutilizables** 
 git clone <url-del-repositorio>
 ```
 2. Ejecutar la aplicación:
-ng serve -o
 
+```bash
+ng serve -o
+```
 ---
 
 ## Descripción de los componentes
